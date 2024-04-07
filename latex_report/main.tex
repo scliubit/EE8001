@@ -1,0 +1,99 @@
+% !TEX program = pdflatex
+% !BIB program = biblatex
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\usepackage{times}
+%\usepackage[document]{ragged2e}
+\usepackage{titlesec}
+\usepackage{hyperref}
+%\usepackage[none]{hyphenat}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+
+\usepackage[backend=biber,natbib=true,style=ieee,doi=false,url=false,mincitenames=2]{biblatex}% for number of authors exceeds 3, show 2 of them.
+
+\geometry{a4paper,margin=1in}
+\addbibresource{reference.bib}
+
+\renewenvironment{abstract}
+{\normalsize
+	\begin{center}
+		\bfseries \abstractname\vspace{-1.0em}\vspace{0pt}
+	\end{center}
+	\list{}{%
+		\setlength{\leftmargin}{1mm}% <---------- CHANGE HERE
+		\setlength{\rightmargin}{\leftmargin}%
+	}%
+	\item\relax
+	}
+{\endlist}
+
+
+\titleformat{\section}
+{\normalfont\bfseries\vspace{-1.0em}}{\hspace{0.63cm}\thesection.}{1em}{\vspace{-0.8em}}
+
+\titleformat{\subsection}
+{\normalfont\bfseries\vspace{-1.0em}}{\hspace{0cm}\thesubsection.}{1em}{\vspace{-0em}}
+
+% Turn on the style
+\pagestyle{fancy}
+% Clear the header and footer
+\fancyhf{}
+% Set the right side of the footer to be the page number
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}%
+
+
+\begin{document}
+	\setcounter{page}{2}
+	\doublespacing
+	\begin{abstract}
+%	\noindent 
+	Abstract of no more than 400 words that summarizes the main findings of the literature review and highlights the importance of the chosen survey topic.
+	\end{abstract}
+	\section{Background}
+	\begin{adjustwidth}{3.27em}{0mm}
+		The goal is to write this section in a way that is comprehensible to a non-specialist.
+		~\cite{6773024}
+		
+		\subsection{Example}
+	\end{adjustwidth}
+	
+	\section{Significance and Applications}
+	\begin{adjustwidth}{3.27em}{0em}
+		The goal is to write this section in a way that is comprehensible to a non-specialist.\\
+		~\\
+	\end{adjustwidth}
+	
+	\section{Review of the State-of-the-Art (Existing Works)}
+	\begin{adjustwidth}{3.27em}{0em}
+		Organize the different works surveyed.\\
+		~\\
+	\end{adjustwidth}
+	
+	\section{Critique of Previous Works}
+	\begin{adjustwidth}{3.27em}{0em}
+		You may group this section with the review of the state-of-art if this it is more appropriate.\\
+		~\\
+	\end{adjustwidth}
+	
+	\section{Major Issues and Potential Research Directions}
+	\begin{adjustwidth}{3.27em}{0em}
+		This is an important section as it highlights the motivation and basis of your proposed research.\\
+		~\\
+	\end{adjustwidth}
+	
+	\section{References}
+	\begin{adjustwidth}{3.27em}{0em}
+		Should be formatted and standardized preferably in the IEEE citation style
+		
+		\printbibliography[heading=none]
+		
+	\end{adjustwidth}
+	
+\end{document}
