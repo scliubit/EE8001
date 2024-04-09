@@ -14,6 +14,11 @@
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{color}
+
 
 \usepackage[backend=biber,natbib=true,style=ieee,doi=false,url=false,mincitenames=2]{biblatex}% for number of authors exceeds 3, show 2 of them.
 
@@ -38,7 +43,7 @@
 {\normalfont\bfseries\vspace{-1.0em}}{\hspace{0.25in}\thesection.}{1em}{\vspace{-0.8em}}
 
 \titleformat{\subsection}
-{\normalfont\bfseries\vspace{-1.0em}}{\hspace{0.25in}\thesubsection.}{1em}{\vspace{-0em}}
+{\normalfont\bfseries\vspace{-1.0em}}{\hspace{0in}\thesubsection.}{1em}{\vspace{-0em}}
 
 % Turn on the style
 \pagestyle{fancy}
@@ -89,11 +94,10 @@
 	\end{adjustwidth}
 	
 	\section{References}
+	\vspace{3mm}
+	\printbibliography[heading=none]
 	\begin{adjustwidth}{3.27em}{0em}
 		Should be formatted and standardized preferably in the IEEE citation style
-		
-		\printbibliography[heading=none]
-		
+		% just make it blank or delete this env. \printbibliography will deal with the reference.
 	\end{adjustwidth}
-	
 \end{document}
